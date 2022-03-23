@@ -12,19 +12,20 @@
           <figure id="header_logo">
             <img src="../assets/img/avada-drivers-logo-2x.png" alt="" />
           </figure>
-          <ul>
+          <ul class="nav-ul">
             <li v-for="(link, i) in links" :key="i">
-              <a :href="link.page_link"> {{ link.page_index }}</a>
+              <a :href="link.page_link"> {{ link.page_index }}</a
+              ><span class="update" v-if="link.news === true">new</span>
             </li>
           </ul>
           <button class="header_button">book now</button>
         </div>
       </div>
     </div>
-      <div class="container jumbo">
-        <h1>Drive with Avada</h1>
-        <p>We offer the finest driving tuition money can buy</p>
-      </div>
+    <div class="container jumbo">
+      <h1>Drive with Avada</h1>
+      <p>We offer the finest driving tuition money can buy</p>
+    </div>
   </header>
 </template>
 
@@ -36,26 +37,32 @@ export default {
         {
           page_index: "home",
           page_link: "https://www.google.it/",
+          news: false,
         },
         {
           page_index: "about",
           page_link: "https://www.google.it/",
+          news: false,
         },
         {
           page_index: "price",
           page_link: "https://www.google.it/",
+          news: false,
         },
         {
-          page_index: "courses, new ",
+          page_index: "courses",
           page_link: "https://www.google.it/",
+          news: true,
         },
         {
           page_index: "location",
           page_link: "https://www.google.it/",
+          news: false,
         },
         {
           page_index: "blog",
           page_link: "https://www.google.it/",
+          news: false,
         },
       ],
     };
@@ -67,25 +74,24 @@ export default {
 <style scoped lang="scss">
 #header {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   background-image: url("../assets/img/homepage-hero-background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 782px;
-  .jumbo{
+  .jumbo {
     display: flex;
-color: white;
-flex-direction: column;
-justify-content: center;
-flex-grow: 1;
-h1{
-font-size: 63px;
-}
-p{
-font-size: 27px;
-}
-
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    h1 {
+      font-size: 63px;
+    }
+    p {
+      font-size: 27px;
+    }
   }
   .contact-header {
     background-color: #484848;
@@ -113,20 +119,55 @@ font-size: 27px;
       align-items: center;
       justify-content: space-between;
       #header_logo {
-          flex-grow: 1;
-         img {
-            width: 260px;
-          }
+        padding: 20px;
+
+        img {
+          width: 260px;
         }
-        
-      ul{
+      }
+
+      ul {
         gap: 50px;
-      display: flex;
+        display: flex;
+        li {
+          position: relative;
+        }
+        li a:hover{
+          color: var(--over-green);
+           transition: all 0.5s;
+
+        }
+        li a:hover::after {
+          content: "";
+          opacity: 1;
+          bottom: -10px;
+          width: 100%;
+          transition: all 0.5s;
+        }
+        li a:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 50%;
+          opacity: 0;
+          transform: translate(-50%, 0);
+          bottom: -10px;
+          width: 0px;
+          height: 2px;
+          background-color: var(--over-green);
+        }
+        .update {
+          background-color: var(--main-green);
+          margin-left: 7px;
+          border-radius: 5px;
+          padding: 1px 4px;
+        }
+      }
     }
-    }
-  
-    a{
+
+    a {
       text-decoration: none;
+      
     }
     .header_button {
       color: currentColor;
