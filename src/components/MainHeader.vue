@@ -9,7 +9,7 @@
       </div>
       <div class="container-fluid nav-bar">
         <div class="container">
-          <figure id="header_logo">
+          <figure id="logo">
             <img src="../assets/img/avada-drivers-logo-2x.png" alt="" />
           </figure>
           <ul class="nav-ul">
@@ -18,7 +18,7 @@
               ><span class="update" v-if="link.news === true">new</span>
             </li>
           </ul>
-          <button class="header_button">book now</button>
+          <button class="green_button">book now</button>
         </div>
       </div>
     </div>
@@ -103,12 +103,7 @@ export default {
       font-size: 12px;
     }
   }
-  .nav-bar,
-  .header_button {
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+
   .nav-bar {
     display: flex;
     height: 120px;
@@ -118,12 +113,6 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      #header_logo {
-        padding: 20px;
-
-        img {
-          width: 260px;
-        }
       }
 
       ul {
@@ -169,17 +158,6 @@ export default {
       text-decoration: none;
       
     }
-    .header_button {
-      color: currentColor;
-      background-color: var(--main-green);
-      padding: 10px 20px;
-      border-radius: 29px;
-      border: 2px solid transparent;
-      text-align: center;
-      width: 145px;
-      height: 46px;
-      display: block;
-    }
   }
-}
+
 </style>

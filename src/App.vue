@@ -42,7 +42,25 @@ ul,ol{
   min-height: 100vh;
   min-width: 1920px;
   font-size: 1.5 rem ;
+  
 }
+  .nav-bar,
+  .green_button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+.green_button {
+      color: white;
+      background-color: var(--main-green);
+      padding: 10px 20px;
+      border-radius: 29px;
+      border: 2px solid transparent;
+      text-align: center;
+      width: 145px;
+      height: 46px;
+      display: block;
+    }
 .container-fluid{
   min-width: 1920px
 }
@@ -54,4 +72,13 @@ ul,ol{
 .flex{
   display: flex;
 }
+#logo {
+        
+
+        img {
+          width: 260px;
+}
+}
+
+
 </style>
