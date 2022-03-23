@@ -21,13 +21,34 @@ export default {
   --main-green: #85b680 ;
   --over-green: #79b27b ;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ol{
+  list-style: none;
+  a{
+    color: currentColor;
+  }
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   min-height: 100vh;
   min-width: 1920px;
   font-size: 1.5 rem ;
+}
+.container-fluid{
+  min-width: 1920px
+}
+.container {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+}
+.flex{
+  display: flex;
 }
 </style>
