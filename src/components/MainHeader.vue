@@ -97,7 +97,7 @@ export default {
     background-color: #484848;
     height: 30px;
     .container {
-      color: #7f9ea8;
+      color: var(--text-xs);
       display: flex;
       justify-content: space-between;
       font-size: 12px;

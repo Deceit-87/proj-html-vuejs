@@ -21,6 +21,8 @@ export default {
 
 <style lang="scss">
 :root {
+       
+  --text-xs:#7f9ea8;
   --main-green: #85b680 ;
   --over-green: #79b27b ;
 }

@@ -42,9 +42,9 @@
         </ul>
       </div>
       <div class="footer-card">
-        <figure>
-          <img src="../assets/img/footer-ad-grid.png" alt="" />
-        </figure>
+        
+          <img src="../assets/img/labels.png" alt="" />
+        
         <button class="green_button">book now</button>
       </div>
     </div>
@@ -68,6 +68,7 @@ export default {
 
 <style lang="scss" scoped>
 #footer {
+    color:var(--text-xs);
   height: 591px;
   background-image: url("../assets/img/footer-background-color.jpg");
   background-position: center;
