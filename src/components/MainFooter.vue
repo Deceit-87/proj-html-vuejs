@@ -99,6 +99,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
   i{
       padding-right: 15px;
   }

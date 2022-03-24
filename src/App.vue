@@ -63,7 +63,7 @@ ul,ol{
       border-radius: 29px;
       border: 2px solid transparent;
       text-align: center;
-      width: 145px;
+      min-width: 145px;
       height: 46px;
       display: block;
       &:hover{
@@ -77,6 +77,9 @@ ul,ol{
   width: 1180px;
   margin: 0 auto;
   display: flex;
+}
+.container-half{
+  width: 50%;
 }
 .flex{
   display: flex;
