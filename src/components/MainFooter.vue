@@ -108,7 +108,7 @@ export default {
       height: 150px;
       width: 100%;
       position: absolute;
-bottom: -100px;
+bottom: 0px;
 .container{
     font-size: 12px;
     display: flex;

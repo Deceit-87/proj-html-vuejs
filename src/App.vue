@@ -1,6 +1,7 @@
 <template>
   <div id="app">
    <Header/>
+   <Form/>
    <Footer/>
   </div>
 </template>
@@ -8,11 +9,14 @@
 <script>
 import Header from './components/MainHeader.vue'
 import Footer from './components/MainFooter.vue'
+import Form from './components/MainForm.vue'
 
 export default {
   name: 'App',
   components: {
+
     Header,
+    Form,
     Footer,
     
   }
@@ -62,6 +66,9 @@ ul,ol{
       width: 145px;
       height: 46px;
       display: block;
+      &:hover{
+        background-color:var(--over-green)
+      }
     }
 .container-fluid{
   min-width: 1920px
