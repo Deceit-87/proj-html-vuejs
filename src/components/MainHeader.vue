@@ -10,7 +10,7 @@
       <div class="container-fluid nav-bar">
         <div class="container">
           <figure id="logo">
-            <img src="../assets/img/avada-drivers-logo-2x.png" alt="" />
+            <img src="../assets/img/avada-ad-drivers-logo-2x.png" alt="" />
           </figure>
           <ul class="nav-ul">
             <li v-for="(link, i) in links" :key="i">
