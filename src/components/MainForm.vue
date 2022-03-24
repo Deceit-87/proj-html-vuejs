@@ -110,7 +110,7 @@ export default {
       align-items: center;
       box-shadow: 0px 25px 20px 0px rgba(211, 211, 211, 0.486);
       position: absolute;
-      top: -5%;
+      top: -6%;
       background-color: #fff;
       border-radius: 10px;
       p {

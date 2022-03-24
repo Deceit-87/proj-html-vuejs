@@ -15,7 +15,7 @@
         </p>
       </div>
       <div class="footer-card">
-        <h3 class="">contats details</h3>
+        <h4 class="">contats details</h4>
         <ul class="">
           <li class="flex">
             <i class="fas fa-home"></i>
@@ -36,7 +36,7 @@
         </ul>
       </div>
       <div class="footer-card course">
-        <h3 class="ad-h3">courses</h3>
+        <h4 class="ad-h4">courses</h4>
         <ul>
           <li v-for="link in footerLinks" :key="link">
             <i class="far fa-arrow-alt-circle-right"></i>
@@ -147,16 +147,16 @@ i{
       }
       ul li {
         padding-bottom: 12px;
-        padding-right: 45px;
+        padding-right: 40px;
         a {
           text-decoration: none;
         }
       }
-      h3,
+      h4,
       .button_green {
         text-transform: uppercase;
       }
-      h3 {
+      h4 {
         padding-bottom: 30px;
         color: white;
         font-weight: 700;

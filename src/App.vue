@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Form />
+    <Courses/>
     <Footer />
   </div>
 </template>
@@ -10,12 +11,14 @@
 import Header from "./components/MainHeader.vue";
 import Footer from "./components/MainFooter.vue";
 import Form from "./components/MainForm.vue";
+import Courses from "./components/MainCourse.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Form,
+    Courses,
     Footer,
   },
 };
@@ -34,6 +37,8 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 ul,
 ol {
@@ -70,6 +75,23 @@ ol {
     background-color: var(--over-green);
   }
 }
+.sec_button {
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border: 3px solid var(--text-xs);
+    transition: all .3s ease;
+    text-transform: uppercase;
+    background-color: #fff;
+    color:var(--text-xs);
+    transition: all 0.5s;
+    &:hover{
+      border: 3px solid var(--over-green);
+      color: var(--over-green);
+
+    }
+    }
 .container-fluid {
   min-width: 1920px;
 }
@@ -89,5 +111,9 @@ ol {
   img {
     width: 260px;
   }
+}
+h3{
+  font-size: 42px;
+  font-weight: 700;
 }
 </style>
