@@ -30,7 +30,9 @@
       </div>
       <button class="green_button">More from the blog</button>
 
-      <div class="container news-bottom"></div>
+      <div class="container news-bottom">
+
+      </div>
     </div>
   </section>
 </template>
@@ -73,14 +75,32 @@ gap: 33px;
   align-items: center;
   width: 44%;
   margin: 0;
-  .chose-car img{
+  a:nth-child(2){
+          font-size: 21px;
+text-decoration: none;
+color: var(--main-green);
+font-weight: 700;
+padding-bottom: 14px;
+padding-top: 23px;
+      }
+  .chose-car {
+       
+      img{
       width: 513px;
       height: 322px;
+     
   }
-}
+}}
 
         }
     }
   }
-
+.container.news-bottom{
+    height: 300px;
+width: 100%;
+margin-top: 9px;
+background-size: 100% 70px;
+    background-image: url('../assets/img/latestnews-bottom-1200x105.png');
+    background-repeat: no-repeat;
+}
 </style>
