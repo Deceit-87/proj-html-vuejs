@@ -43,6 +43,7 @@ export default {
   --over-green: #79b27b;
   --lightGrey: #e5e8eb;
   --darkGrey: #484848;
+  --deepBlue: #036db4;
 }
 * {
   margin: 0;
