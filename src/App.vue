@@ -110,6 +110,11 @@ ol {
   margin: 0 auto;
   display: flex;
 }
+.container-md{
+  width: 636px;
+  margin: 0 auto;
+  display: flex;
+}
 .container-half {
   width: 41%;
   margin-right: 5%;
