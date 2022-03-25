@@ -4,6 +4,7 @@
     <Form />
     <Courses/>
     <Instructor/>
+    <Testimonials/>
     <Footer />
   </div>
 </template>
@@ -14,6 +15,8 @@ import Footer from "./components/MainFooter.vue";
 import Form from "./components/MainForm.vue";
 import Courses from "./components/MainCourse.vue";
 import Instructor from "./components/MainInstructor.vue";
+import Testimonials from "./components/MainTestimonials.vue";
+
 
 export default {
   name: "App",
@@ -22,6 +25,7 @@ export default {
     Form,
     Courses,
     Instructor,
+    Testimonials,
     Footer,
   },
 };

@@ -21,7 +21,13 @@
         v-for="(instructor, i) in instructors"
         :key="i"
       >
-        <img :src="instructor.picture" alt="" />
+        <div 
+        
+        class="tooltip">
+          {{instructor.name.split(' ').join('_')}}
+        </div>
+        <img 
+         :src="instructor.picture" alt="" />
 
         <h4>{{ instructor.name }}</h4>
         <div class="social">
@@ -39,6 +45,7 @@
 export default {
   data() {
     return {
+      
       instructors: [
         {
           picture: require(`../assets/img/instructor-mikehart.jpg`),
@@ -67,7 +74,7 @@ export default {
 <style lang="scss" scoped>
 #instructor {
 
-  min-height: 700px;
+height: 665px;
   .instructor-title{
       color: var(--darkGrey);
       font-size: 40px;
@@ -105,6 +112,7 @@ padding-bottom:40px ;
     gap:10px;
 
 .instructor-card {
+  position: relative;
   padding-top: 47px;
   display: flex;
   flex-direction: column;
@@ -116,6 +124,21 @@ padding-bottom:40px ;
   width: 33%;
   box-shadow: 0px 25px 20px 0px rgba(155, 155, 155, 0.71);
   line-height: 2;
+ &:hover .tooltip{
+    display: block;
+ }
+  .tooltip{
+    display: none;
+    position: absolute;
+background: white;
+padding: 0px 24px;
+border: 1px solid black;
+text-transform: lowercase;
+height: 20px;
+line-height: 15px;
+top: 30%;
+right: 13%;
+  }
   &:nth-child(2){
       height: 484px;
       img{
