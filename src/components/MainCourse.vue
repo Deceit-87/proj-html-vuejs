@@ -51,7 +51,19 @@
     <div class="rate-container container-fluid">
       <div class="container">
         <div class="rate-card">
-            <div></div>
+          <div class="circular">
+            <div class="inner"></div>
+            <div class="number">100%</div>
+            <div class="circle">
+              <div class="bar left">
+                <div class="progress"></div>
+              </div>
+              <div class="bar right">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+          <p>PASS RATE</p>
         </div>
         <div class="rate-card"></div>
         <div class="rate-card"></div>
@@ -61,7 +73,30 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+    data(){
+        return{
+            
+        }
+    },
+    methods:{
+      
+        percentage: function() {
+        const numb = document.querySelector("number");
+        let counter = 0
+        if(counter == 100 ){
+        clearInterval();
+         }else{
+         counter+=1;
+         numb.innerText = counter + "%";
+         
+
+         
+             }
+        },
+    }
+};
 </script>
 
 <style lang="scss">
@@ -180,13 +215,85 @@ export default {};
   background-repeat: no-repeat;
   background-position: top;
   .rate-card {
-      border-radius: 10px;
-      border-top: 5px solid var(--main-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border-top: 8px solid var(--main-green);
     background-color: #fff;
     height: 400px;
     width: 33%;
     margin-right: 20px;
     box-shadow: 0px 25px 20px 0px rgba(155, 155, 155, 0.71);
+    .circular{
+         height:100px;
+  width: 100px;
+  position: relative;  
+        .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+  .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: var(--main-green);
+}
+}
+        .number{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:10;
+  font-size:18px;
+  font-weight:500;
+  color: var(--main-green);
+}
+ 
+  .inner{
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #fff;
+  border-radius: 100%;
+}
+}
+  }
+}
+
+
+// animazione
+.circle .left .progress{
+  z-index:1;
+  animation: left 4s linear both;
+}
+@keyframes left{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  transform: rotate(180deg);
+  z-index:3;
+ 
+}
+.circle .right .progress{
+  animation: right 4s linear both;
+  animation-delay:4s;
+}
+@keyframes right{
+  100%{
+    transform: rotate(180deg);
   }
 }
 </style>

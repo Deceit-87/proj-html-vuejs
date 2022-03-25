@@ -38,7 +38,7 @@
       <div class="footer-card course">
         <h4 class="ad-h4">courses</h4>
         <ul>
-          <li v-for="link in footerLinks" :key="link">
+          <li v-for="(link,i) in footerLinks" :key="i">
             <i class="far fa-arrow-alt-circle-right"></i>
             <a :href="link.url_link">{{ link.name_link }}</a>
           </li>
