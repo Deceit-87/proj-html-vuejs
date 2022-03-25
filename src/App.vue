@@ -2,9 +2,11 @@
   <div id="app">
     <Header />
     <Form />
-    <Courses/>
-    <Instructor/>
-    <Testimonials/>
+    <Courses />
+    <Instructor />
+    <Testimonials />
+    <LatestNews />
+    <NewsLetter />
     <Footer />
   </div>
 </template>
@@ -16,7 +18,8 @@ import Form from "./components/MainForm.vue";
 import Courses from "./components/MainCourse.vue";
 import Instructor from "./components/MainInstructor.vue";
 import Testimonials from "./components/MainTestimonials.vue";
-
+import LatestNews from "./components/MainNews.vue";
+import NewsLetter from "./components/MainLetter.vue";
 
 export default {
   name: "App",
@@ -26,6 +29,8 @@ export default {
     Courses,
     Instructor,
     Testimonials,
+    LatestNews,
+    NewsLetter,
     Footer,
   },
 };
@@ -33,7 +38,6 @@ export default {
 
 <style lang="scss">
 :root {
-
   --text-xs: #7f9ea8;
   --main-green: #85b680;
   --over-green: #79b27b;
@@ -44,8 +48,8 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 ul,
 ol {
@@ -83,22 +87,21 @@ ol {
   }
 }
 .sec_button {
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 8px 18px;
-    border: 3px solid var(--text-xs);
-    transition: all .3s ease;
-    text-transform: uppercase;
-    background-color: #fff;
-    color:var(--text-xs);
-    transition: all 0.5s;
-    &:hover{
-      border: 3px solid var(--over-green);
-      color: var(--over-green);
-
-    }
-    }
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border: 3px solid var(--text-xs);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: var(--text-xs);
+  transition: all 0.5s;
+  &:hover {
+    border: 3px solid var(--over-green);
+    color: var(--over-green);
+  }
+}
 .container-fluid {
   min-width: 1920px;
 }
@@ -119,7 +122,7 @@ ol {
     width: 260px;
   }
 }
-h3{
+h3 {
   font-size: 42px;
   font-weight: 700;
 }
