@@ -48,12 +48,14 @@
     </div>
 
     <!-- RATE -->
+
+
     <div class="rate-container container-fluid">
       <div class="container">
         <div class="rate-card">
           <div class="circular">
             <div class="inner"></div>
-            <div :click="percentage" class="number"><span> 95% </span> </div>
+            <div  class="number"><span> 95% </span></div>
             <div class="circle95">
               <div class="bar left95">
                 <div class="progress"></div>
@@ -65,10 +67,10 @@
           </div>
           <p>PASS RATE</p>
         </div>
-             <div class="rate-card">
+        <div class="rate-card">
           <div class="circular">
             <div class="inner"></div>
-            <div :click="percentage" class="number"><span> 100% </span></div>
+            <div  class="number"><span> 100% </span></div>
             <div class="circle100">
               <div class="bar left100">
                 <div class="progress"></div>
@@ -81,9 +83,9 @@
           <p>REFERRAL RATE</p>
         </div>
         <div class="rate-card">
-             <div class="circular">
+          <div class="circular">
             <div class="inner"></div>
-            <div :click="percentage" class="number"><span> 0% </span></div>
+            <div  class="number"><span> 0% </span></div>
             <div class="circle">
               <div class="bar left">
                 <div class="progress"></div>
@@ -93,10 +95,9 @@
               </div>
             </div>
           </div>
-          <p>PASS RATE</p>
+          <p>ACCIDENT RATE</p>
         </div>
-        </div>
-      
+      </div>
     </div>
   </section>
 </template>
@@ -236,9 +237,9 @@ export default {
     width: 33%;
     margin-right: 20px;
     box-shadow: 0px 25px 20px 0px rgba(155, 155, 155, 0.71);
-    p{
-        padding-top: 50px;
-        color: var(--text-xs);
+    p {
+      padding-top: 50px;
+      color: var(--text-xs);
     }
     .circular {
       height: 200px;
@@ -261,7 +262,6 @@ export default {
         }
       }
       .number {
-         
         position: absolute;
         top: 50%;
         left: 50%;
@@ -270,9 +270,10 @@ export default {
         font-size: 18px;
         font-weight: 500;
         color: var(--main-green);
-        span{
-            color: var(--text-xs);
-             font-size: 50px;
+        span {
+          color: var(--text-xs);
+          font-size: 40px;
+          font-weight: 700;
         }
       }
 
@@ -315,8 +316,6 @@ export default {
     transform: rotate(160deg);
   }
 }
-
-
 
 // PROGRESS 100%
 

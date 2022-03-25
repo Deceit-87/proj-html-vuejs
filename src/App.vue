@@ -3,6 +3,7 @@
     <Header />
     <Form />
     <Courses/>
+    <Instructor/>
     <Footer />
   </div>
 </template>
@@ -12,6 +13,7 @@ import Header from "./components/MainHeader.vue";
 import Footer from "./components/MainFooter.vue";
 import Form from "./components/MainForm.vue";
 import Courses from "./components/MainCourse.vue";
+import Instructor from "./components/MainInstructor.vue";
 
 export default {
   name: "App",
@@ -19,6 +21,7 @@ export default {
     Header,
     Form,
     Courses,
+    Instructor,
     Footer,
   },
 };
